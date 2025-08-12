@@ -1,0 +1,21 @@
+yum install wget
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.108/bin/apache-tomcat-9.0.108.tar.gz
+ls -a
+tar -xvzf apache-tomcat-9.0.108.tar.gz
+mv apache-tomcat-9.0.108.tar.gz /tmp
+ls -a
+cd apache-tomcat-9.0.108
+cd bin
+chmod +x startup.sh
+chmod +x shutdown.sh
+cd ..
+yum install java*
+cd conf 
+ls
+vim tomcat-users.xml
+cd ..
+find -name context.xml
+...................
+cd bin
+./shutdown.sh
+./startup.sh
