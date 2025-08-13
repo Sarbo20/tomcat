@@ -1,0 +1,33 @@
+cat /etc/os-release
+rpmquery mount-s3
+uname -r
+yum install wget -y
+wget https://s3.amazonaws.com/mountpoint-s3-release/latest/x86_64/mount-s3.rpm
+ll
+yum install ./mount-s3.rpm
+rpmquery mount-s3
+yum install unzip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo .aws/install
+l.
+ls -a
+cd aws
+ll
+cd
+aws configure
+cd aws
+ll
+cd
+ls -a
+cd .aws/
+ll
+cat config
+cat credentials
+cd
+mkdir /csk
+mount-s3 sarbo-bucket /csk/
+df -h
+cd /csk/
+ll
+cd
