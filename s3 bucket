@@ -1,0 +1,21 @@
+sudo yum update
+sudo yum install automake fuse fuse-devel gcc-c++ git libcurl-devel libxml2-devel make openssl-devel
+git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+ll
+cd s3fs-fuse
+./autogen.sh
+./configure --prefix=/usr --with-openssl
+make
+sudo make install
+verify pkg
+which s3fs
+touch /etc/passwd-s3fs
+vim /etc/passwd-s3fs
+sudo chmod 640 /etc/passwd-s3fs
+s3fs sarbo-bucket /mnt -o passwd_file=/etc/passwd-s3fs
+df -h
+mkdir /csk
+s3fs sarbo-bucket /csk -o passwd_file=/etc/passwd-s3fs
+cd /csk/
+touch sarbo.txt{1..100}
+cat /etc/passwd-s3fs
