@@ -1,0 +1,16 @@
+create 2 instance, diff avail zone, same security group, key name same, http add inbound
+target group- create target- load balancer- create load balancer- copy DNS port and paste to edge giving 80 port
+1st inst
+####
+yum install httpd -y
+cd /var/www/html
+cat > sarbo.html
+hi i am sarbo
+##lastly 
+systemctl stop httpd
+2nd inst
+####
+yum install httpd -y
+cd /var/www/html
+cat > pal.html
+hello good night
