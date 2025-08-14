@@ -1,0 +1,15 @@
+yum install httpd -y
+    2  systemctl start httpd
+    3  systemctl enable httpd
+    4  df -h
+    5  fdisk -l
+    7  ll
+    8  lsblk
+    9  blkid
+   10  fdisk -l
+   11  mkfs.ext4 /dev/nvme1n1
+   12  mkdir /data
+   13  mount /dev/nvme1n1 /data
+   14  cd /data
+   15  touch pal.txt{1..10}
+   16  ll
