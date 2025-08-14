@@ -1,0 +1,28 @@
+3 instances diff os (aws,redhat,ubuntu) , diff region , same security group, same key, edit inbound rule NFS
+search NFS- create file system- name- network- manage- delete other zone and save- 
+aws inst
+######
+rpmquery nfs-utils
+systemctl start nfs-utils.service
+systemctl status nfs-utils.service
+ mkdir /data
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-042d94deca139e02f.efs.us-east-1.amazonaws.com:/ /data
+cd /data
+cat > index.html
+redhat inst
+#######
+yum install nfs-utils -y
+systemctl start nfs-utils.service
+mkdir /data
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-042d94deca139e02f.efs.us-east-1.amazonaws.com:/ /data
+cd /data
+cat index.html
+ubuntu inst
+######
+apt update -y
+apt install nfs-common
+systemctl start nfs-utils.service
+mkdir /data
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-042d94deca139e02f.efs.us-east-1.amazonaws.com:/ /data
+cd /data
+cat index.html
