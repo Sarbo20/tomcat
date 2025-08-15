@@ -3,6 +3,8 @@ target group- create target- load balancer- create load balancer- copy DNS port 
 1st inst
 ####
 yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
 cd /var/www/html
 cat > sarbo.html
 hi i am sarbo
@@ -11,6 +13,8 @@ systemctl stop httpd
 2nd inst
 ####
 yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
 cd /var/www/html
 cat > pal.html
 hello good night
