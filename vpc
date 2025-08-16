@@ -1,0 +1,3 @@
+serach vpc- your vpc- create vpc- internet gateways- create- attach to vpc- subnet- create subnet- one is public and another one is private- create route table -one is public one is private
+select public route- edit route- add igw -save- in below edit subnet association- select public- save assosiation
+in terminal paste public inst ssh then paste private ssh in same terminal below
