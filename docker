@@ -1,0 +1,30 @@
+1st ter
+###################################################
+yum install docker -y
+systemctl start docker 
+systemctl enable docker
+
+pull image command for that copy image from docker hub [ubuntu and httpd]
+docker pull ubuntu:questing-20250830
+docker pull httpd:trixie
+docker run -it --name devops ubuntu:questing-20250830 /bin/bash
+inside container..........
+apt update -y
+apt install apache2 -y
+cd /var/www/html/
+echo "i am sarbojit" > index.html
+service apache2 start
+
+2nd term
+#################################################
+docker ps -a
+docker inspect devops | less
+(copy ip at the end)
+ curl http://172.17.0.2
+docker run -it --name devops1 -p 8080:80 ubuntu:questing-20250830 /bin/bash
+apt update -y
+apt install apache2 -y
+cd /var/www/html/
+echo "i am sarbojit pal" > index1.html
+service apache2 start
+copy public ipv4 from instance and do:8080
